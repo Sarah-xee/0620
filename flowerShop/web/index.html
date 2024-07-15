@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>花惹發</title>
     <link rel="icon" href="./favicon.ico">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -36,6 +36,73 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <section id="banner"></section>
+        <section id="news">
+            <header class="title">
+                <h2>NEWS</h2>
+                <h3>最新消息</h3>
+            </header>
+            <div class="box__list">
+                <article class="item">
+                    <!-- a>(figure>img)+div.content>h1+p-->
+                    <a href="#">
+                        <figure><img src="./images/pt_news1.jpg" alt=""></figure>
+                        <div class="content">
+                            <h1>NEWS TITLE</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque pariatur harum eligendi facilis exercitationem ratione iste adipisci perspiciatis alias mollitia nisi recusandae eos, architecto magnam? Qui accusamus soluta ab culpa.
+                        </div>
+                    </a>
+                </article>
+        </section>
+        <section id="service">
+            <header class="title">
+                <h2>SERVICE</h2>
+                <h3>服務項目</h3>
+            </header>
+        </section>
+        <section id="video">
+            <header class="title">
+                <h2>VIDEO</h2>
+                <h3>相關影片</h3>
+            </header>
+        </section>
+        <section id="about">
+            <header class="title">
+                <h2>ABOUT</h2>
+                <h3>關於我們</h3>
+            </header>
+        </section>
+        <section id="contact">
+            <header class="title">
+                <h2>CONTACT</h2>
+                <h3>聯絡我們</h3>
+            </header>
+            <form action="" method="post" name="form--contact" id="form--contact" title="聯絡我們表單">
+                <label for="username">*姓名：</label>
+                <input type="text" name="username" id="username" title="姓名欄位" placeholder="請輸入姓名" required autocomplete autofocus>
+            
+                <label for="tel">聯絡電話:</label>
+                <input type="tel" name="tel" id="tel" title="聯絡電話欄位" placeholder="請輸入連絡電話">
+                
+                <label for="email">*Email:</label>
+                <input type="email" name="email" id="email" title="email欄位" placeholder="請輸入電子郵件信箱" required>
+
+                <label for="message">*留言</label>
+                <textarea name="message" id="message" title="留言欄位"></textarea>
+
+                <small>此表單為練習作品，不具有收集資料的功能</small>
+
+                <!-- 表單按鈕一定要放在form裡面 -->
+                <button type="submit" name="btn__contact--submit" id="btn__contact--submit" title="送出按鈕">
+                    <span>送出</span>
+                </button>
+            </form>
+            <!-- 裝飾花 -->
+            <div class="flower_r"><img src="./images/flower_r.png" alt="裝飾紅花"></div>
+            <div class="flower_w"><img src="./images/flower_w.png" alt="裝飾白花"></div>
+        </section>
+    </main>
 </body>
 
 </html>
