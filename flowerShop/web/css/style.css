@@ -52,9 +52,40 @@ img {
 a {
     display: block; /* 將預設inline改為block */;
     text-decoration: none;
-    color: #444;
+    color: var(--deep);
 }
 /* 共用區 */
+:root {
+    /* 灰階 */
+    --deep: #444;
+    --grey: #999;
+    --light: #f1f1f1;
+
+    /* 背景 */
+    --primary: #f2edf0;
+    --secondary: #e6ece5;
+    --tertiary: #ecf0f4;
+
+    /* 輔助 */
+    --lesser-1: #f3e4e4;
+    --lesser-2: #efdbdb;
+    --lesser-3: #cdaaab;
+    --lesser-4: #8f6b6d;
+
+    /* 透明 */
+    --alpha-w-60: rgba(255, 255, 255, .6);
+    --alpha-b-20: rgba(0, 0, 0, .2);
+    --alpha-b-40: rgba(0, 0, 0, .4);
+    --alpha-r-20: rgba(220, 185, 185, 0.2 );
+
+    /* 漸層 */
+    --gradient-w-a: rgba(255, 255, 255, 0.15),rgba(255, 255, 255, 0.5);
+
+    /* 陰影 */
+    --box-shadow-g:2px 2px 3px rgba(0, 0, 0, .15),
+        inset -1px -1px rgba(255, 255, 255, .8);
+}
+
 /* 動態按鈕 */
 #btn__contact--submit {
     border-radius: 50px;
@@ -114,8 +145,9 @@ transform: rotate(0deg) translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0) translateZ(0);
     }
 }
+/* 共用區 */
 .btn-s{
-    background-color: #fff;
+    background-color: var(--light);
     color: #444;
     width: auto!important;
     height: 35px;
@@ -125,8 +157,8 @@ transform: rotate(0deg) translate3d(0, 0, 0);
     transition: .35s ease-in-out;
 }
 .btn-s:hover{
-    background-color: #444;
-    color: #fff;
+    background-color: var(--deep);
+    color: var(--light);
     padding: 0px 20px;
 }
 #form--contact input,#form--contact textarea {
@@ -156,7 +188,7 @@ transform: rotate(0deg) translate3d(0, 0, 0);
     width: 65px;/* 相對於父元素 */
 }
 .logo svg {
-    filter: drop-shadow( 2px 2px rgba(255,255,255,.6));
+    filter: drop-shadow( 2px 2px var(--alpha--60-w));
 }
 .navigation {
     display: flex;
@@ -261,9 +293,59 @@ section{
 }
 .box__list p{
     font-size: .9rem;
-    text-align: justify;/* 齊行，建議中文使用，英文是單句間距均分，不建議使用 */
+    text-align: justify;
+    /* 齊行，建議中文使用、英文是單字間距均分，建議不要使用 */
 }
+
 /* 最新消息區 */
+#news {
+    background-color: var(--primary);
+}
+#news .content {
+    background-color: var(--alpha-w-40);
+    transition:  .4s;
+}
+#news .content:hover {
+    background-color:  var(--light);
+}
+#news p {
+    /* 多行省略 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 文字溢出時出現省略號，若有設定line-clamp時，瀏覽器會自動加入 */
+    display: -webkit-box;
+    /* 彈性布局 */
+    -webkit-box-orient: vertical;
+    定義box佈局
+}
+/* 相關影片區 */
+#video {
+    background-color: var(--tertiary);
+}
+.video {
+    width: 65%;
+    max-width: 1050px;
+}
+video {
+    width: 100%;
+}
+/* 關於我們區 */
+#about .content {
+    width: 65%;
+    height: 100%; /* 高度%，是抓父元素的相對高度 */
+    background-color: var(--alpha-r-60);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#about p {
+    width: 85%;
+    height: 65vh;
+    overflow: auto;
+}
+
 /* 聯絡我們區 */
 #contact{
     position: relative; /* 專門作為absolute的定位依據 */
