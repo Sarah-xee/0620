@@ -83,8 +83,26 @@ a {
 
     /* 陰影 */
     --box-shadow-g:2px 2px 3px rgba(0, 0, 0, .15),
-        inset -1px -1px rgba(255, 255, 255, .8);
+        inset -1px -1px rgba(255, 255, 255, .8);    
 }
+
+/* 捲軸樣式 */
+::-webkit-scrollbar { /* 滾動條/捲軸基底 */
+    width: 15px;
+    height: 15px;
+    background-color: var(--lesser-1);
+}
+::-webkit-scrollbar-button{ /* 捲軸上的按鈕(向上和向下的箭頭) */
+    background-color: var(--lesser-4);
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb{
+    
+}
+::-webkit-scrollbar-track
+
+
 
 /* 動態按鈕 */
 #btn__contact--submit {

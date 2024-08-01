@@ -35,7 +35,7 @@
                 <li><a href="#">CONTACT</a></li>
             </ul>
         </nav>
-    </header>
+    <!-- 換圖輪播區 -->
     <main>
         <section id="banner"></section>
         <section id="news">
@@ -76,16 +76,17 @@
         <section id="about">
 
 
-            <div class="content"></div>
+            <div class="content">
 
             <header class="title">
                 <h2>ABOUT</h2>
                 <h3>關於我們</h3>
             </header>
 
-
-
-
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ad tempora optio ut iusto, eum, architecto ducimus iure similique doloremque corporis quaerat asperiores quod quas, laudantium vitae sint. Ipsam, quam.</p>
+            <!-- video無法使用css設定為背景，他一定要存在於HTML中 -->
+            <video src="./images/flower.mp4"></video>
+        </div>
         </section>
         <section id="contact">
             <header class="title">
@@ -117,6 +118,13 @@
             <div class="flower_w"><img src="./images/flower_w.png" alt="裝飾白花"></div>
         </section>
     </main>
+
+    <!-- 先載入jquery原始碼 讓瀏覽器看懂 -->
+    <!-- jQuery原始碼，只能選一個版本套用，不可重複使用 -->
+    <!-- 套件給的jQuery CDN:<script src="https://cdnjs.cloudflare"></script> -->
+    <!-- jQuery官方CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/carousl.js"></script>
 </body>
 
 </html>
